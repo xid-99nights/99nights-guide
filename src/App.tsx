@@ -17,6 +17,8 @@ import type { GameClass } from "./types/class";
 // -----------------------------
 // Data Model
 // -----------------------------
+import gameThumbnail from "./assets/99nights.png";
+
 
 const GAME_LINKS = [
   { label: "Official Roblox Page", href: "https://www.roblox.com/" },
@@ -183,10 +185,10 @@ export default function App() {
               <div className="md:col-span-2 rounded-2xl border border-black/10 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6 shadow-sm">
                 <div className="flex items-center gap-3 mb-4">
                   <img
-                    src="https://www.roblox.com/asset-thumbnail/image?assetId=123456789&width=768&height=768&format=png"
-                    alt="Game Thumbnail"
-                    className="w-24 h-24 rounded-lg object-cover"
-                  />
+					src={gameThumbnail}
+					alt="99 Nights Guide"
+					className="w-24 h-24 rounded-lg object-cover"
+				  />
                   <div>
                     <h2 className="text-2xl font-bold tracking-tight mb-1">Welcome to the 99 Nights in the Forest Strategy Guide!</h2>
                     <p className="text-neutral-600 dark:text-neutral-400">
