@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Search, Sun, Moon, Ship, LayoutGrid, ExternalLink, ChevronRight } from "lucide-react";
-import { fishman, medic, hunter, builder } from "./data/classes";
+import { fishman, medic, hunter, chef } from "./data/classes";
 import { ClassCard } from "./components/ClassCard";
 import { Section } from "./components/Section";
 import type { GameClass } from "./types/class";
@@ -10,7 +10,7 @@ import type { GameClass } from "./types/class";
  * Single-file React app (Tailwind CSS).
  * - Dark/light theme toggle
  * - Overview page + Classes page
- * - Fully authored: Fishman (Fisherman), Medic, Hunter, Builder/Support
+ * - Fully authored: Fisherman, Medic, Hunter, Chef
  * - Responsive layout w/ sidebar, search
  */
 
@@ -59,7 +59,7 @@ const overviewSections = [
   },
 ];
 
-const allClasses: GameClass[] = [fishman, medic, hunter, builder];
+const allClasses: GameClass[] = [fishman, medic, hunter, chef];
 
 // -----------------------------
 // Utilities + Lightweight Tests
@@ -97,12 +97,12 @@ export function filterOverviewSections<T extends { id: string; title: string; bu
     const fish = byKey("fishman");
     const medic = byKey("medic");
     const hunter = byKey("hunter");
-    const builder = byKey("builder");
+    const chef = byKey("Chef");
 
     console.assert(!!fish && fish.perks?.length === 3, "fishman: exists and has three perk entries");
     console.assert(!!medic && medic.short, "medic: exists and has short description");
     console.assert(!!hunter && hunter.short, "hunter: exists and has short description");
-    console.assert(!!builder && builder.short, "builder: exists and has short description");
+    console.assert(!!chef && chef.short, "builder: exists and has short description");
 
     console.info("[99 Nights Guide] Lightweight tests passed.")
   } catch (err) {
