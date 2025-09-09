@@ -42,13 +42,13 @@ const GettingStartedPage = () => {
       step: 2,
       title: "Gather Basic Resources",
       description: "Collect essential materials for your first night.",
-      details: ["Chop trees for wood - Used for Fire and Bulding", "Look for food sources - Carrots, Berries, Rabit, Wolf", "Search chests for items", "Search for Scrap Metal - for Building" ]
+      details: ["Chop trees for wood - Used for Fire and Bulding", "Look for food sources - Carrots, Berries, Rabbit, Wolf", "Search chests for items", "Search for Scrap Metal - for Building"]
     },
     {
       step: 3,
       title: "Build Your Camp",
       description: "Keep your fire Burning Strong",
-      details: ["Dont let your fire burn low", "Build walls around your area", "Hot Big Fire is what will keep you alive" "Build your Camp your way"]
+      details: ["Dont let your fire burn low", "Build walls around your area", "Hot Big Fire is what will keep you alive", "Build your Camp your way"]
     },
     {
       step: 4,
