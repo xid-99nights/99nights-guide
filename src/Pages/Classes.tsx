@@ -1,98 +1,108 @@
-interface CraftingItem {
-  label: string;
-  icon: string;
-  showcase: string;
-  description: string;
-  materials: string;
+interface ClassData {
+  image: string;
+  name: string;
+  price: number;
+  starterTools: string;
+  level1Perk: string;
+  level2Perk: string;
+  level3Perk: string;
 }
 
-const craftingItems: CraftingItem[] = [
+const classesData: ClassData[] = [
   {
-    label: "Map",
-    icon: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/5/5c/Map_Logo_PNG.png/revision/latest?cb=20250725141944",
-    showcase: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/a/a5/Map_in-game.png/revision/latest?cb=20250625154911",
-    description: "Shows a map with information on it. Can be opened anywhere by pressing M on PC or by clicking on the map icon on the top right on mobile.",
-    materials: "* 3 https://static.wikia.nocookie.net/99-nights-in-the-forest/images/6/69/Wood_PNG.png/revision/latest?cb=20250625212713"
+    image: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/a/a3/Camperclass.png/revision/latest?cb=20250726043432",
+    name: "Camper",
+    price: 10,
+    starterTools: "https://99-nights-in-the-forest.fandom.com/wiki/Flashlights#Old_Flashlight",
+    level1Perk: "+10% reduced hunger drain",
+    level2Perk: "+ Increased visibility at nightRequirements Food Cooked: 0/75 Logs Burned: 0/200",
+    level3Perk: "+ Spawn with a [Stew](/wiki/Stew)Requirements Food Cooked: 0/150 Logs Burned: 0/350"
   },
   {
-    label: "Old Bed",
-    icon: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/4/46/Old_Bed_PNG.png/revision/latest?cb=20250626184223",
-    showcase: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/a/a3/Old_Bed.png/revision/latest?cb=20250626184356",
-    description: "Makes the [day counter](/wiki/Days) increase by +1.",
-    materials: "* 20 https://static.wikia.nocookie.net/99-nights-in-the-forest/images/6/69/Wood_PNG.png/revision/latest?cb=20250625212713"
+    image: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/a/a1/Scavengerclass.png/revision/latest?cb=20250726043517",
+    name: "Scavenger",
+    price: 25,
+    starterTools: "",
+    level1Perk: "+ 2 sack space",
+    level2Perk: "+ Open chests 20% fasterRequirements Scrap Scrapped: 0/450 Studs Travelled: 0/2500",
+    level3Perk: "+ Chance to get scrap as a bonus drop from chestsRequirements Scrap Scrapped: 0/1000 Studs Travelled: 0/10000"
   },
   {
-    label: "Bunny Trap",
-    icon: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/f/f1/BunnyTrap.png/revision/latest?cb=20250725162538",
-    showcase: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/1/18/Bunny_Trap.png/revision/latest?cb=20250725195341",
-    description: "Can be placed near a [bunny burrow](https://99-nights-in-the-forest.fandom.com/wiki/Bunny#Locations) to catch food. Can be crafted up to ten times. It can give 4 morsels if it uses a carrot.",
-    materials: "* 5 https://static.wikia.nocookie.net/99-nights-in-the-forest/images/6/69/Wood_PNG.png/revision/latest?cb=20250625212713"
+    image: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/a/a5/Basedefenderclass.png/revision/latest?cb=20250905003959",
+    name: "Base Defender",
+    price: 40,
+    starterTools: "https://99-nights-in-the-forest.fandom.com/wiki/Barbed_Wire_Blueprint",
+    level1Perk: "+ Starts with 2 defense blueprints",
+    level2Perk: "+ Defenses can be upgraded/upgraded durabilityRequirements Build defenses: 0/60 Get kills with defenses: 0/80",
+    level3Perk: "+ Defenses you place deal higher damageRequirements Build defenses: 0/150 Get kills with defenses: 0/200"
   },
   {
-    label: "Crafting Bench 2",
-    icon: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/3/3d/Crafting_Bench_2_Logo.png/revision/latest?cb=20250625161841",
-    showcase: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/3/37/Crafting_Bench_2_in-game.png/revision/latest?cb=20250625200322",
-    description: "Unlocks Tier 2 of the Crafting Bench.",
-    materials: `* 1 https://static.wikia.nocookie.net/99-nights-in-the-forest/images/e/e1/Scrap_PNG.png/revision/latest?cb=20250625212954\n* 5 https://static.wikia.nocookie.net/99-nights-in-the-forest/images/6/69/Wood_PNG.png/revision/latest?cb=20250625212713`
+    image: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/e/e8/Medicclass.png/revision/latest?cb=20250726045426",
+    name: "Medic",
+    price: 40,
+    starterTools: "https://99-nights-in-the-forest.fandom.com/wiki/Bandage",
+    level1Perk: "+ 5x faster revives",
+    level2Perk: "+ Improved revive on others, restores more health and hungerRequirements Find Medical Supplies: 0/30 Revive Players: 0/25",
+    level3Perk: "+ One of your bandages upgrade to a MedkitRequirements Find Medical Supplies: 0/50 Revive Players: 0/40"
   },
   {
-    label: "Sun Dial",
-    icon: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/2/2c/Sun_Dial_PNG.png/revision/latest?cb=20250626152723",
-    showcase: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/5/5a/Sun_Dial_In-game.png/revision/latest?cb=20250627133046",
-    description: "Shows how much time is left until day/night. Can be viewed at any time in the top right corner of the screen.",
-    materials: "* 5 https://static.wikia.nocookie.net/99-nights-in-the-forest/images/e/e1/Scrap_PNG.png/revision/latest?cb=20250625212954"
+    image: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/c/c7/Cookclass.png/revision/latest?cb=20250726045514",
+    name: "Cook",
+    price: 40,
+    starterTools: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/5/59/ChefStarterItem.png/revision/latest?cb=20250708151726",
+    level1Perk: "+ Seasoned food restores more hunger",
+    level2Perk: "+ The Crockpot cooks 20% faster Requirements Meat Cooked: 0/200 Stews Cooked: 0/50",
+    level3Perk: "+ 25% chance to make a [Hearty Stew](/wiki/Hearty_stew) Requirements Meat Cooked: 0/400 Stews Cooked: 0/200"
   },
   {
-    label: "Regular Bed",
-    icon: "",
-    showcase: "",
-    description: "",
-    materials: ""
+    image: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/9/9c/Hunterclass.png/revision/latest?cb=20250726045624",
+    name: "Hunter",
+    price: 40,
+    starterTools: "",
+    level1Perk: "+ Increased damage to animals",
+    level2Perk: "+ Chance to get double pelt drops from animalsRequirements Animals Killed: 0/50 Pelts Traded: 0/30",
+    level3Perk: "+ Chance to get triple pelt drops from animalsRequirements Animals Killed: 0/150 Pelts Traded: 0/100"
   },
-  // Note: Fetched data truncated at "Regular Bed". Add the remaining crafting items from the wiki manually.
+  // Note: The fetched data was truncated at "Hunter". Add the remaining 17 classes from the wiki manually if needed, following the same structure.
 ];
 
-const Crafting: React.FC = () => {
+const Classes: React.FC = () => {
   return (
     <div className="page-container">
-      <h1>Crafting</h1>
-      <p>Crafting is one of the most important mechanics in 99 Nights in the Forest, allowing the player to craft things such as farm plots, beds, and other various items, tools and devices to aid them in their survival.</p>
-      <img src="https://static.wikia.nocookie.net/99-nights-in-the-forest/images/2/21/Grinder.png/revision/latest?cb=20250626134103" alt="Grinder" />
-      <p>The Grinder, where you can grind materials to craft with them in the Crafting Bench.</p>
-      <table className="crafting-table">
+      <h1>Classes</h1>
+      <p>Classes are a gameplay system in 99 Nights in the Forest that give players unique perks, starter items, and progression paths. As of July 25th, 2025, there are 23 available Classes.</p>
+      <table className="class-table">
         <thead>
           <tr>
-            <th>Label</th>
-            <th>Icon</th>
-            <th>In-Game Showcase</th>
-            <th>Description</th>
-            <th>Needed Materials</th>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Price (Diamonds)</th>
+            <th>Starter Tools</th>
+            <th>Level 1 Perk</th>
+            <th>Level 2 Perk</th>
+            <th>Level 3 Perk</th>
           </tr>
         </thead>
         <tbody>
-          {craftingItems.map((item, index) => (
+          {classesData.map((cls, index) => (
             <tr key={index}>
-              <td>{item.label}</td>
-              <td><img src={item.icon} alt={item.label} width="50" /></td>
-              <td><img src={item.showcase} alt={`${item.label} showcase`} width="50" /></td>
-              <td>{item.description}</td>
-              <td style={{ white-space: 'pre-line' }}>{item.materials}</td> {/* This handles newlines as line breaks */}
+              <td><img src={cls.image} alt={cls.name} width="50" /></td>
+              <td>{cls.name}</td>
+              <td>{cls.price}</td>
+              <td>{cls.starterTools}</td>
+              <td>{cls.level1Perk}</td>
+              <td>{cls.level2Perk}</td>
+              <td>{cls.level3Perk}</td>
             </tr>
           ))}
         </tbody>
       </table>
       <section>
-        <h2>Badges Related to Crafting</h2>
-        <p> [Add badges text from wiki]</p>
-      </section>
-      <section>
-        <h2>Tips and Notes</h2>
-        <ul>
-          <li>Place Bunny Traps near burrows.</li>
-        </ul>
+        <h2>Talents</h2>
+        <p>Talents are random perks. Cost: 60 Diamonds to unlock, 30 to reroll.</p>
       </section>
     </div>
   );
 };
 
-export default Crafting;
+export default Classes;
