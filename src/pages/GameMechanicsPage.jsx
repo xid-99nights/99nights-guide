@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Hammer, Sword, Fish, Home, Cog, Zap, Heart, Shield } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -31,13 +32,38 @@ const GameMechanicsPage = () => {
     }
   ]
 
+  const [selectedCraftingTier, setSelectedCraftingTier] = useState(1)
+
   const craftingRecipes = [
-    { name: "Wooden Wall", materials: ["5 Wood"], description: "Basic defensive structure" },
-    { name: "Stone Wall", materials: ["3 Stone", "2 Wood"], description: "Stronger defensive wall" },
-    { name: "Bear Trap", materials: ["3 Metal", "2 Wood"], description: "Damages enemies who step on it" },
-    { name: "Campfire", materials: ["5 Wood", "2 Stone"], description: "Provides light and warmth" },
-    { name: "Wooden Spear", materials: ["3 Wood"], description: "Basic melee weapon" },
-    { name: "Bow", materials: ["4 Wood", "2 String"], description: "Ranged weapon for hunting" }
+    // Tier 1
+    { name: "Wooden Wall", materials: ["5 Wood"], description: "Basic defensive structure", tier: 1 },
+    { name: "Wooden Spear", materials: ["3 Wood"], description: "Basic melee weapon", tier: 1 },
+    { name: "Campfire", materials: ["5 Wood", "2 Stone"], description: "Provides light and warmth", tier: 1 },
+    { name: "Small Chest", materials: ["10 Wood"], description: "Stores a small amount of items", tier: 1 },
+
+    // Tier 2
+    { name: "Stone Wall", materials: ["3 Stone", "2 Wood"], description: "Stronger defensive wall", tier: 2 },
+    { name: "Bow", materials: ["4 Wood", "2 String"], description: "Ranged weapon for hunting", tier: 2 },
+    { name: "Stone Pickaxe", materials: ["5 Stone", "2 Wood"], description: "Used for mining stone and metal", tier: 2 },
+    { name: "Medium Chest", materials: ["15 Wood", "5 Stone"], description: "Stores a moderate amount of items", tier: 2 },
+
+    // Tier 3
+    { name: "Metal Wall", materials: ["5 Metal", "3 Stone"], description: "Very strong defensive wall", tier: 3 },
+    { name: "Crossbow", materials: ["6 Wood", "3 Metal", "3 String"], description: "Powerful ranged weapon", tier: 3 },
+    { name: "Bear Trap", materials: ["3 Metal", "2 Wood"], description: "Damages enemies who step on it", tier: 3 },
+    { name: "Large Chest", materials: ["20 Wood", "10 Stone", "5 Metal"], description: "Stores a large amount of items", tier: 3 },
+
+    // Tier 4
+    { name: "Reinforced Gate", materials: ["10 Metal", "5 Wood"], description: "Heavy duty gate for base entry", tier: 4 },
+    { name: "Revolver", materials: ["8 Metal", "2 Leather"], description: "Reliable firearm", tier: 4 },
+    { name: "Advanced Campfire", materials: ["10 Wood", "5 Stone", "3 Metal"], description: "More efficient and provides wider warmth", tier: 4 },
+    { name: "Workbench", materials: ["15 Wood", "10 Metal"], description: "Unlocks advanced crafting recipes", tier: 4 },
+
+    // Tier 5
+    { name: "Electric Fence", materials: ["15 Metal", "5 Wire", "1 Battery"], description: "Electrocutes enemies on contact", tier: 5 },
+    { name: "Assault Rifle", materials: ["12 Metal", "5 Plastic", "3 Wire"], description: "High-fire rate weapon", tier: 5 },
+    { name: "Automated Turret", materials: ["20 Metal", "10 Wire", "2 Circuit Board"], description: "Automatically attacks enemies", tier: 5 },
+    { name: "Generator", materials: ["10 Metal", "5 Wire", "5 Fuel"], description: "Powers electric devices", tier: 5 }
   ]
 
   const buildingTips = [
@@ -156,28 +182,40 @@ const GameMechanicsPage = () => {
                 Crafting System
               </CardTitle>
               <CardDescription className="text-green-200">
-                Craft essential items and equipment to survive in the forest
+                Craft essential items and equipment to survive in the forest. Select a tier to view recipes.
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-white">Essential Recipes</h3>
-                <div className="grid md:grid-cols-2 gap-4">
-                  {craftingRecipes.map((recipe, index) => (
-                    <div key={index} className="bg-black/30 rounded-lg p-4 border border-green-700/20">
-                      <h4 className="font-semibold text-orange-400">{recipe.name}</h4>
-                      <p className="text-green-200 text-sm mb-2">{recipe.description}</p>
-                      <div className="flex flex-wrap gap-1">
-                        {recipe.materials.map((material, matIndex) => (
-                          <Badge key={matIndex} variant="outline" className="border-green-500 text-green-300 text-xs">
-                            {material}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
+              <Tabs value={selectedCraftingTier.toString()} onValueChange={(value) => setSelectedCraftingTier(parseInt(value))}>
+                <TabsList className="grid w-full grid-cols-5 bg-black/20 border-green-700/30">
+                  {[1, 2, 3, 4, 5].map((tier) => (
+                    <TabsTrigger key={tier} value={tier.toString()} className="data-[state=active]:bg-green-600">
+                      Tier {tier}
+                    </TabsTrigger>
                   ))}
-                </div>
-              </div>
+                </TabsList>
+
+                {[1, 2, 3, 4, 5].map((tier) => (
+                  <TabsContent key={tier} value={tier.toString()} className="space-y-4 mt-6">
+                    <h3 className="text-lg font-semibold text-white">Tier {tier} Recipes</h3>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      {craftingRecipes.filter(recipe => recipe.tier === tier).map((recipe, index) => (
+                        <div key={index} className="bg-black/30 rounded-lg p-4 border border-green-700/20">
+                          <h4 className="font-semibold text-orange-400">{recipe.name}</h4>
+                          <p className="text-green-200 text-sm mb-2">{recipe.description}</p>
+                          <div className="flex flex-wrap gap-1">
+                            {recipe.materials.map((material, matIndex) => (
+                              <Badge key={matIndex} variant="outline" className="border-green-500 text-green-300 text-xs">
+                                {material}
+                              </Badge>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </TabsContent>
+                ))}
+              </Tabs>
             </CardContent>
           </Card>
         </TabsContent>

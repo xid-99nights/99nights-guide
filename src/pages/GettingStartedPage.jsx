@@ -8,13 +8,13 @@ const GettingStartedPage = () => {
     {
       icon: Clock,
       title: "First Night Priority",
-      description: "Build a basic shelter and campfire before nightfall. The Deer becomes active at night.",
+      description: "Explore the small map. Kill rabbits to try and get rabbit foot find food and wood bring it back to came you have all night to explore the first day. The Deer wont attack the first night.",
       priority: "Critical"
     },
     {
       icon: Hammer,
       title: "Resource Gathering",
-      description: "Collect wood, stone, and food during the day. Resources are scarce at night.",
+      description: "Collect wood, and food during the day. Resources are scarce to find at night.",
       priority: "High"
     },
     {
@@ -26,7 +26,7 @@ const GettingStartedPage = () => {
     {
       icon: Shield,
       title: "Defense Setup",
-      description: "Build walls and traps around your camp. The Deer will attack your base.",
+      description: "Build and plant trees to make walls and trap around your camp.  The Cultists will attack your base.",
       priority: "Medium"
     }
   ]
@@ -42,19 +42,19 @@ const GettingStartedPage = () => {
       step: 2,
       title: "Gather Basic Resources",
       description: "Collect essential materials for your first night.",
-      details: ["Chop trees for wood", "Mine rocks for stone", "Look for food sources", "Search chests for items"]
+      details: ["Chop trees for wood - Used for Fire and Bulding", "Look for food sources - Carrots, Berries, Rabit, Wolf", "Search chests for items", "Search for Scrap Metal - for Building" ]
     },
     {
       step: 3,
-      title: "Build Your First Shelter",
-      description: "Create a safe space to survive the night.",
-      details: ["Find a good location near resources", "Build walls around your area", "Place a campfire for light and warmth", "Add a roof if possible"]
+      title: "Build Your Camp",
+      description: "Keep your fire Burning Strong",
+      details: ["Dont let your fire burn low", "Build walls around your area", "Hot Big Fire is what will keep you alive" "Build your Camp your way"]
     },
     {
       step: 4,
       title: "Prepare for Night",
       description: "Get ready before the Deer becomes active.",
-      details: ["Stock up on food", "Craft basic weapons", "Set up defensive structures", "Stay near your campfire"]
+      details: ["Stock up on food", "Find weapons", "Set up defensive structures", "Stay near your campfire"]
     }
   ]
 
@@ -62,7 +62,7 @@ const GettingStartedPage = () => {
     "Wandering alone at night",
     "Not building defenses early",
     "Ignoring the campfire",
-    "Fighting the Deer without preparation",
+    "Fighting without preparation",
     "Not coordinating with teammates"
   ]
 
@@ -189,12 +189,12 @@ const GettingStartedPage = () => {
             <div className="text-sm text-green-300">Missing Children</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-orange-400">99</div>
+            <div className="text-3xl font-bold text-orange-400">99+</div>
             <div className="text-sm text-green-300">Nights to Survive</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-orange-400">1</div>
-            <div className="text-sm text-green-300">Terrifying Deer</div>
+            <div className="text-sm text-green-300">Terrifying Deer & Giant Owl</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-orange-400">∞</div>
@@ -233,7 +233,7 @@ const GettingStartedPage = () => {
             <ul className="space-y-1 text-green-200">
               <li>• Prioritize food and wood</li>
               <li>• Share resources with team</li>
-              <li>• Store items in chests</li>
+              <li>• Store items at Camp</li>
               <li>• Plan for long-term survival</li>
             </ul>
           </div>
