@@ -89,7 +89,7 @@ const Crafting: React.FC = () => {
         <h2>Tips and Notes</h2>
         <ul>
           <li>Place Bunny Traps near burrows.</li>
-          <!-- Add more tips from wiki -->
+      //Add more tips here
         </ul>
       </section>
     </div>
