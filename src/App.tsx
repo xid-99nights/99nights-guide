@@ -13,6 +13,7 @@ import Lore from './pages/Lore';
 import UpdateLog from './pages/UpdateLog';
 import TipsAndTricks from './pages/TipsAndTricks';
 import Fishing from './pages/Fishing';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import './App.css';
 
 function App() {
