@@ -40,7 +40,7 @@ const craftingItems: CraftingItem[] = [
     icon: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/2/2c/Sun_Dial_PNG.png/revision/latest?cb=20250626152723",
     showcase: "https://static.wikia.nocookie.net/99-nights-in-the-forest/images/5/5a/Sun_Dial_In-game.png/revision/latest?cb=20250627133046",
     description: "Shows how much time is left until day/night. Can be viewed at any time in the top right corner of the screen.",
-    materials: "* 5 https://static.wikia.nocookie.net/99-nights-in-the-forest/images/e/e1/Scrap_PNG.png/revision/latest?cb=20250625212954"
+    materials: "- 5 https://static.wikia.nocookie.net/99-nights-in-the-forest/images/e/e1/Scrap_PNG.png/revision/latest?cb=20250625212954"
   },
   {
     label: "Regular Bed",
@@ -118,14 +118,14 @@ const Crafting: React.FC = () => {
               <td><img src={item.icon} alt={item.label} width="50" /></td>
               <td><img src={item.showcase} alt={`${item.label} showcase`} width="50" /></td>
               <td>{item.description}</td>
-              <td style={{ white-space: 'pre-line' }}>{item.materials}</td>
+              <td style={{ whiteSpace: 'pre-line' }}>{item.materials}</td>
             </tr>
           ))}
         </tbody>
       </table>
       <section>
         <h2>Badges Related to Crafting</h2>
-        <p> [Add badges text from wiki]</p>
+        <p>[Add badges text from wiki]</p>
       </section>
       <section>
         <h2>Tips and Notes</h2>
