@@ -115,8 +115,8 @@ export const classesData = {
         "Use terrain to get close to enemies safely",
         "Coordinate with ranged teammates for protection",
         "Focus on chokepoints and narrow areas",
-        "Save flamethrower fuel for critical moments"
-		"focus on kills to level to 3 getting the speed boost makes this class OP"
+        "Save flamethrower fuel for critical moments",
+		"Focus on kills to level to 3 getting the speed boost makes this class OP"
       ],
       
       synergies: [
