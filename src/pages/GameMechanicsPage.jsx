@@ -53,20 +53,26 @@ const GameMechanicsPage = () => {
 	{ name: "Log Wall", materials: ["12 Wood"], description: "A collection of tall logs that fortifies and protects your base. Can be placed down more than once.", tier: 2 }, 
 	{ name: "Bear Trap X8", materials: ["3 Scrap"], description: "Can be set down to trap enemies and deal damage, even being able to damage players. Can be crafted up to eight times.", tier: 2 }, 
 	{ name: "Crafting Bench 3", materials: ["15 Wood", "15 Scrap" ], description: "Unlocks Tier 3 of the Crafting Bench.", tier: 2 },
+	
     // Tier 3
-    { name: "Metal Wall", materials: ["5 Metal", "3 Stone"], description: "Very strong defensive wall", tier: 3 },
-    { name: "Crossbow", materials: ["6 Wood", "3 Metal", "3 String"], description: "Powerful ranged weapon", tier: 3 },
-    { name: "Bear Trap", materials: ["3 Metal", "2 Wood"], description: "Damages enemies who step on it", tier: 3 },
-    { name: "Large Chest", materials: ["20 Wood", "10 Stone", "5 Metal"], description: "Stores a large amount of items", tier: 3 },
-
+    { name: "Crock Pot", materials: ["10 Scrap", "15 Wood"], description: "Allows for combining food to make Stew. Chilis and Berries cannot be put inside a Crock Pot.", tier: 3 },
+    { name: "Radar", materials: ["15 Wood", "10 Scrap"], description: "Detects key places in the Forest by using Scrap.", tier: 3 },
+    { name: "Boost Pad", materials: ["10 Scrap", "15 Wood"], description: "Gives a speed boost Charge then use", tier: 3 },
+    { name: "Biofuel Processor", materials: ["12 Wood", "12 Scrap"], description: "Turns Logs, pelts and meat into Biofuel.", tier: 3 },
+	{ name: "Torch", materials: ["6 Scrap", "6 Wood"], description: "Expands the safe zone by a small amount. Can be placed up to ten times.", tier: 3 },
+    { name: "Good Bed", materials: ["10 Wood", "10 Scrap"], description: "Makes the day counter increase by +1.", tier: 3 },
+    { name: "Lightning Rod", materials: ["8 Scrap"], description: "Attracts lightning, making sure it does not strike the player. Can be placed more than once.", tier: 3 },
+	{ name: "Crafting Bench 4", materials: ["30 Wood", "30 Scrap", "2 Amulets" ], description: "Unlocks Tier 4 of the Crafting Bench.", tier: 3 },
+  
     // Tier 4
-    { name: "Reinforced Gate", materials: ["10 Metal", "5 Wood"], description: "Heavy duty gate for base entry", tier: 4 },
-    { name: "Revolver", materials: ["8 Metal", "2 Leather"], description: "Reliable firearm", tier: 4 },
-    { name: "Advanced Campfire", materials: ["10 Wood", "5 Stone", "3 Metal"], description: "More efficient and provides wider warmth", tier: 4 },
-    { name: "Workbench", materials: ["15 Wood", "10 Metal"], description: "Unlocks advanced crafting recipes", tier: 4 },
-
-    // Tier 5
-    { name: "Electric Fence", materials: ["15 Metal", "5 Wire", "1 Battery"], description: "Electrocutes enemies on contact", tier: 5 },
+    { name: "Ammo Crate", materials: ["20 Wood", "30 Scrap", "1 Amulets" ], description: "Allows players to buy ammo with Scrap.", tier: 4 },
+    { name: "Oil Drill", materials: ["25 Wood", "35 Scrap", "1 Amulets" ], description: "Drills for oil barrels periodically.", tier: 4 },
+    { name: "Giant Bed", materials: ["20 Wood", "30 Scrap", "1 Amulets" ], description: "Makes the day counter increase by +1.", tier: 4 },
+    { name: "Teleporter", materials: ["15 Wood", "25 Scrap", "1 Amulets"], description: "Allows teleporting to anywhere on the map (requires two or more Teleporters to work). Can be place more than once.", tier: 4 },
+	{ name: "Crafting Bench 5", materials: ["50 Wood", "50 Scrap", "1 Forest Gem" ], description: "Unlocks Tier 4 of the Crafting Bench.", tier: 4 },
+   
+   // Tier 5
+    { name: "Respawn Capsule", materials: ["15 Metal", "5 Wire", "1 Battery"], description: "Electrocutes enemies on contact", tier: 5 },
     { name: "Assault Rifle", materials: ["12 Metal", "5 Plastic", "3 Wire"], description: "High-fire rate weapon", tier: 5 },
     { name: "Automated Turret", materials: ["20 Metal", "10 Wire", "2 Circuit Board"], description: "Automatically attacks enemies", tier: 5 },
     { name: "Generator", materials: ["10 Metal", "5 Wire", "5 Fuel"], description: "Powers electric devices", tier: 5 }
