@@ -36,17 +36,23 @@ const GameMechanicsPage = () => {
 
   const craftingRecipes = [
     // Tier 1
-    { name: "Wooden Wall", materials: ["5 Wood"], description: "Basic defensive structure", tier: 1 },
-    { name: "Wooden Spear", materials: ["3 Wood"], description: "Basic melee weapon", tier: 1 },
-    { name: "Campfire", materials: ["5 Wood", "2 Stone"], description: "Provides light and warmth", tier: 1 },
-    { name: "Small Chest", materials: ["10 Wood"], description: "Stores a small amount of items", tier: 1 },
+    { name: "Map", materials: ["3 Wood"], description: "Shows a map with information on it. Can be opened anywhere by pressing M on PC or by clicking on the map icon on the top right on mobile.", tier: 1 },
+    { name: "Old Bed", materials: ["20 Wood"], description: "Basic melee weapon", tier: 1 },
+    { name: "Bunny Trap X10", materials: ["5 Wood"], description: "Makes the day counter increase by +1.", tier: 1 },
+    { name: "Small Chest", materials: ["10 Wood"], description: "Can be placed near a bunny burrow to catch food. Can be crafted up to ten times. It can give 4 morsels if it uses a carrot.", tier: 1 },
+	{ name: "Crafting Bench 2", materials: ["5 Wood", "1 Scrap"], description: "Unlocks Tier 2 of the Crafting Bench.", tier: 1 },
 
     // Tier 2
-    { name: "Stone Wall", materials: ["3 Stone", "2 Wood"], description: "Stronger defensive wall", tier: 2 },
-    { name: "Bow", materials: ["4 Wood", "2 String"], description: "Ranged weapon for hunting", tier: 2 },
-    { name: "Stone Pickaxe", materials: ["5 Stone", "2 Wood"], description: "Used for mining stone and metal", tier: 2 },
-    { name: "Medium Chest", materials: ["15 Wood", "5 Stone"], description: "Stores a moderate amount of items", tier: 2 },
-
+    { name: "Sun Dial", materials: ["5 Scrap"], description: "Shows how much time is left until day/night.", tier: 2 },
+    { name: "Regular Bed", materials: ["5 Scrap"], description: "Makes the day counter increase by +1.", tier: 2 },
+    { name: "Compass", materials: ["3 Scrap"], description: "Shows the direction of the Fairy and the missing children, as well as showing where you're facing", tier: 2 },
+    { name: "Freezer", materials: ["4 Scrap"], description: "Stores food neatly", tier: 2 },
+	{ name: "Farm Plot X20", materials: ["10 Wood"], description: "Grows crops automatically every two days. Can be crafted up to 20 times", tier: 2 },
+	{ name: "Wood Rain Storage", materials: ["5 Scrap"], description: "Keeps wood dry when stored inside. Can be placed down more than once.", tier: 2 }, 
+	{ name: "Shelf", materials: ["2 Scrap"], description: "Stores items neatly. Can be placed down more than once.", tier: 2 }, 
+	{ name: "Log Wall", materials: ["12 Wood"], description: "A collection of tall logs that fortifies and protects your base. Can be placed down more than once.", tier: 2 }, 
+	{ name: "Bear Trap X8", materials: ["3 Scrap"], description: "Can be set down to trap enemies and deal damage, even being able to damage players. Can be crafted up to eight times.", tier: 2 }, 
+	{ name: "Crafting Bench 3", materials: ["15 Wood", "15 Scrap" ], description: "Unlocks Tier 3 of the Crafting Bench.", tier: 2 },
     // Tier 3
     { name: "Metal Wall", materials: ["5 Metal", "3 Stone"], description: "Very strong defensive wall", tier: 3 },
     { name: "Crossbow", materials: ["6 Wood", "3 Metal", "3 String"], description: "Powerful ranged weapon", tier: 3 },
