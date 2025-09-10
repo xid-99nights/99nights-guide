@@ -31,7 +31,7 @@ const GameMechanicsPage = () => {
       description: "Complete guide to fishing mechanics and locations"
     }
   ]
-
+// Crafting TAB
   const [selectedCraftingTier, setSelectedCraftingTier] = useState(1)
 
   const craftingRecipes = [
@@ -72,27 +72,22 @@ const GameMechanicsPage = () => {
 	{ name: "Crafting Bench 5", materials: ["50 Wood", "50 Scrap", "1 Forest Gem" ], description: "Unlocks Tier 4 of the Crafting Bench.", tier: 4 },
    
    // Tier 5
-    { name: "Respawn Capsule", materials: ["15 Metal", "5 Wire", "1 Battery"], description: "Electrocutes enemies on contact", tier: 5 },
-    { name: "Assault Rifle", materials: ["12 Metal", "5 Plastic", "3 Wire"], description: "High-fire rate weapon", tier: 5 },
-    { name: "Automated Turret", materials: ["20 Metal", "10 Wire", "2 Circuit Board"], description: "Automatically attacks enemies", tier: 5 },
-    { name: "Generator", materials: ["10 Metal", "5 Wire", "5 Fuel"], description: "Powers electric devices", tier: 5 }
+    { name: "Respawn Capsule", materials: ["40 Wood", "40 Scrap", "1 Forest Gem"], description: "After charging, automatically respawns the most recent dead player inside of it.", tier: 5 },
+    { name: "Temporal Accelerometer", materials: ["40 Wood", "40 Scrap", "1 Forest Gem"], description: "Skips the next night once charged.", tier: 5 },
+    { name: "Weather Machine", materials: ["40 Wood", "40 Scrap", "1 Forest Gem"], description: "After charging, stops rain and thunderstorms for the next three days.", tier: 5 }
   ]
-
+// Building TAB
   const buildingTips = [
-    {
-      title: "Location Selection",
-      description: "Choose elevated areas near resources but away from Deer spawn points",
-      tips: ["Near water sources", "Close to trees and rocks", "Avoid dense forest areas", "Consider escape routes"]
-    },
+    
     {
       title: "Base Layout",
       description: "Design your base for both defense and functionality",
-      tips: ["Central campfire placement", "Multiple exit points", "Storage area protection", "Trap placement at entrances"]
+      tips: [ "Single or Multiple exit points", "Storage area Shared or areas for each person to drop supplies", "Trap placement at entrances"]
     },
     {
       title: "Upgrade Priority",
       description: "Focus on essential upgrades first",
-      tips: ["Walls before decorations", "Campfire fuel efficiency", "Storage capacity", "Defensive structures"]
+      tips: ["Walls before decorations", "Biofuel Processor for fuel efficiency", "Defensive structures", "Plant trees for Walls" ]
     }
   ]
 
@@ -272,7 +267,7 @@ const GameMechanicsPage = () => {
                 Combat & Survival
               </CardTitle>
               <CardDescription className="text-green-200">
-                Master combat mechanics to defend against the Deer and other threats
+                Master combat mechanics to defend against the Wolf, Bear, Cultis and other threats
               </CardDescription>
             </CardHeader>
             <CardContent>
