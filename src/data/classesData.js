@@ -79,7 +79,7 @@ export const classesData = {
     
     levels: {
       1: {
-        perks: ["Access to exclusive Flamethrower weapon", Reload your flamethrower with fuel canisters. Food is auto-cooked on drop ],
+        perks: ["Access to exclusive Flamethrower weapon, Reload your flamethrower with fuel canisters. Food is auto-cooked on drop" ],
         requirements: "Purchase class for 600 diamonds"
       },
       2: {
