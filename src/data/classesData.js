@@ -15,12 +15,12 @@ export const classesData = {
         requirements: "Purchase class for 10 diamonds"
       },
       2: {
-        perks: ["Further reduced hunger drain", "Improved stamina regeneration"],
-        requirements: "Survive 3 nights as Camper"
+        perks: ["Increased visibility at night"],
+        requirements: "Food Cooked: 0/75 Logs Burned: 0/200"
       },
       3: {
-        perks: ["Hunger drain reduced to minimum", "Bonus health regeneration"],
-        requirements: "Survive 10 nights as Camper"
+        perks: [" Spawn with a Stew"],
+        requirements: "Food Cooked: 0/150 Logs Burned: 0/350"
       }
     },
     
@@ -79,16 +79,16 @@ export const classesData = {
     
     levels: {
       1: {
-        perks: ["Access to exclusive Flamethrower weapon", "Immune to fire damage"],
+        perks: ["Access to exclusive Flamethrower weapon", Reload your flamethrower with fuel canisters. Food is auto-cooked on drop ],
         requirements: "Purchase class for 600 diamonds"
       },
       2: {
-        perks: ["Increased fire damage by 25%", "Flamethrower fuel efficiency improved"],
-        requirements: "Deal 1000 fire damage to enemies"
+        perks: ["Fuel canisters restore even more fuel"],
+        requirements: "Kill enemies with fire: 0/150"
       },
       3: {
-        perks: ["Fire attacks spread to nearby enemies", "Chance to ignite enemies on hit"],
-        requirements: "Survive 10 nights using Pyromaniac"
+        perks: ["You move faster for every burning enemy"],
+        requirements: "Kill enemies with fire: 0/400"
       }
     },
     
@@ -99,7 +99,6 @@ export const classesData = {
         "Highest damage output in close range",
         "Exclusive Flamethrower weapon",
         "Excellent for clearing groups of enemies",
-        "Fire immunity provides unique survivability",
         "Area of effect damage potential"
       ],
       
@@ -117,6 +116,7 @@ export const classesData = {
         "Coordinate with ranged teammates for protection",
         "Focus on chokepoints and narrow areas",
         "Save flamethrower fuel for critical moments"
+		"focus on kills to level to 3 getting the speed boost makes this class OP"
       ],
       
       synergies: [
@@ -127,7 +127,6 @@ export const classesData = {
       ],
       
       counters: [
-        "Struggles against flying enemies",
         "Weak against long-range attackers",
         "Vulnerable when out of fuel",
         "Limited effectiveness in open areas"
@@ -137,36 +136,36 @@ export const classesData = {
   
   "assassin": {
     name: "Assassin",
-    cost: 400,
-    stars: 4,
+    cost: 500,
+    stars: 5,
     image: "🗡️",
     description: "Stealth specialist with unique Katana and high mobility",
-    starterItems: ["Katana"],
+    starterItems: ["Katana + Kunai throwing knives"],
     playstyle: "Stealth and Precision",
     difficulty: "Medium-Hard",
     
     levels: {
       1: {
-        perks: ["Access to exclusive Katana weapon", "10% increased movement speed"],
-        requirements: "Purchase class for 400 diamonds"
+        perks: ["+ 10% sprint speed - 15% HP + 5% chance for Throwing Knives to spawn in chests"],
+        requirements: "Purchase class for 500 diamonds"
       },
       2: {
-        perks: ["Katana deals 50% more damage", "Reduced noise when moving"],
-        requirements: "Kill 50 enemies with Katana"
+        perks: ["First hit on an enemy has a chance to critically strike"],
+        requirements: "Kill with no dmg taken: 0/100 Studs Travelled: 0/2500"
       },
       3: {
-        perks: ["Critical hits have chance to instantly kill", "Brief invisibility after kills"],
-        requirements: "Achieve 25 stealth kills"
+        perks: ["+ 10% chance for Throwing Knives to spawn in chests"],
+        requirements: "Kill with no dmg taken: 0/250 Studs Travelled: 0/10000"
       }
     },
     
     guide: {
-      overview: "The Assassin is a high-skill, high-reward class that excels at eliminating key targets quickly and quietly. With the unique Katana and stealth abilities, skilled players can turn the tide of battle through precise strikes and tactical positioning.",
+      overview: "The Assassin is a high-skill, high-reward class that excels at eliminating key targets quickly and quietly. With the unique Katana, skilled players can turn the tide of battle through precise strikes and tactical positioning.",
       
       strengths: [
         "Highest single-target damage potential",
         "Unique Katana with special abilities",
-        "Enhanced mobility and stealth",
+        "Enhanced mobility",
         "Excellent for hit-and-run tactics",
         "Can eliminate threats quickly"
       ],
@@ -175,12 +174,10 @@ export const classesData = {
         "Fragile in direct combat",
         "Requires high skill to master",
         "Limited group combat effectiveness",
-        "Expensive investment (400 diamonds)",
-        "Vulnerable when stealth fails"
+        "Expensive investment (500 diamonds)"
       ],
       
       tips: [
-        "Use stealth to position behind enemies",
         "Target isolated enemies first",
         "Learn enemy patrol patterns",
         "Always have an escape route planned",
@@ -196,9 +193,7 @@ export const classesData = {
       
       counters: [
         "Struggles against groups of enemies",
-        "Weak against area-of-effect attacks",
-        "Limited range forces close combat",
-        "Bright environments reduce stealth effectiveness"
+        "Limited range forces close combat"
       ]
     }
   },
@@ -215,12 +210,12 @@ export const classesData = {
     
     levels: {
       1: {
-        perks: ["5x faster revival of downed players", "Improved recovery on others"],
+        perks: ["5x faster revival of downed players"],
         requirements: "Purchase class for 40 diamonds"
       },
       2: {
-        perks: ["Bandages restore more health", "Can revive players from further distance"],
-        requirements: "Revive 10 players"
+        perks: [ "Improved revive on others, restores more health and hunger"],
+        requirements: "Find Medical Supplies: 0/30 Revive Players: 0/25"
       },
       3: {
         perks: ["Healing items affect nearby teammates", "Chance to not consume medical supplies"],

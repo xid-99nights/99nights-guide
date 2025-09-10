@@ -13,7 +13,7 @@ const ClassesPage = ({ onPageChange }) => {
 
   const classes = [
     { name: "Camper", cost: 10, stars: 1, description: "Basic survival class with reduced hunger drain", starter: "Flashlight", image: "🏕️" },
-    { name: "Scavenger", cost: 25, stars: 1, description: "Opens chests faster with no starter item", starter: "None", image: "🔍" },
+    { name: "Scavenger", cost: 25, stars: 1, description: "extra bag space", starter: "None", image: "🔍" },
     { name: "Base Defender", cost: 40, stars: 2, description: "Can upgrade traps and defenses", starter: "Bear Trap", image: "🛡️" },
     { name: "Medic", cost: 40, stars: 2, description: "Faster revival and improved recovery", starter: "Bandage", image: "🏥" },
     { name: "Cook", cost: 40, stars: 2, description: "Seasoned food restores more hunger", starter: "Seasoning", image: "👨‍🍳" },
@@ -21,17 +21,20 @@ const ClassesPage = ({ onPageChange }) => {
     { name: "Decorator", cost: 40, stars: 2, description: "Furniture trader with decorative items", starter: "Hammer", image: "🔨" },
     { name: "Support", cost: 45, stars: 2, description: "Bonds with players for mutual benefits", starter: "Bandage", image: "🤝" },
     { name: "Fisherman", cost: 50, stars: 2, description: "Fishing rod casts faster", starter: "Fishing Rod", image: "🎣" },
-    { name: "Ranger", cost: 70, stars: 3, description: "Refund ammo chance on shot", starter: "Flashlight & Revolver", image: "🌲" },
+	{ name: "Gambler", cost: 55, stars: 3, description: "50/50 chance of upgrading/downgrading standard chests on opening it: "Random Item", image: "🎲" },
+    { name: "Ranger", cost: 70, stars: 3, description: "Start with 18 ammo", starter: "Flashlight & Revolver", image: "🌲" },
     { name: "Lumberjack", cost: 70, stars: 3, description: "Bonus saplings from trees", starter: "Good Axe", image: "🪓" },
     { name: "Farmer", cost: 80, stars: 3, description: "Use watering can for faster crop growth", starter: "Watering Can", image: "🌱" },
-    { name: "Regen", cost: 100, stars: 3, description: "Health regeneration after taking damage", starter: "Apple Body", image: "💚" },
-    { name: "Brawler", cost: 150, stars: 3, description: "Can't use ranged weapons but deals more damage", starter: "Apple Body", image: "👊" },
-    { name: "Chef", cost: 200, stars: 4, description: "Chef station and recipe book for advanced cooking", starter: "Chef Station Blueprint & Recipe Book", image: "👨‍🍳" },
-    { name: "Gambler", cost: 250, stars: 4, description: "Chance for double loot from chests", starter: "Shortsword", image: "🎲" },
-    { name: "Assassin", cost: 400, stars: 4, description: "Stealth specialist with unique Katana", starter: "Katana", image: "🗡️" },
-    { name: "Cyborg", cost: 600, stars: 5, description: "Block incoming damage with advanced tech", starter: "Apple Body", image: "🤖" },
+	{ name: "Brawler", cost: 100, stars: 3, description: "Can't use ranged weapons but deals more damage", starter: "Apple Body", image: "👊" },
+    { name: "Alien", cost: 100, stars: 3, description: "Night Sight and Alien Tech ", starter: "RayGun", image: "🔫" },
+    { name: "Berserker", cost: 100, stars: 3, description: "auto-revive with low HP and hunger", starter: "Medkitd", image: "👊" },
+    { name: "Chef", cost: 150, stars: 4, description: "Chef station and recipe book for advanced cooking", starter: "Chef Station Blueprint & Recipe Book", image: "👨‍🍳" },
+	{ name: "Blacksmith", cost: 200, stars: 4, description: "You can craft items in the next crafting bench tier", starter: "Hammer", image: "🔨" },
+	{ name: "Poison Master", cost: 200, stars: 4, description: "Your poison effects are stronger", starter: "Blow gun and Armor", image: "☠️" },
+    { name: "Assassin", cost: 500, stars: 5, description: "Stealth specialist with unique Katana", starter: "Katana", image: "🗡️" },
+    { name: "Cyborg", cost: 600, stars: 5, description: "Block incoming damage with advanced tech", starter: "Alien Armor + Laser", image: "🤖" },
     { name: "Pyromaniac", cost: 600, stars: 5, description: "Master of fire with exclusive Flamethrower", starter: "Flamethrower", image: "🔥" },
-    { name: "Big Game Hunter", cost: 600, stars: 5, description: "Increased pet droprate from entities", starter: "Shortsword", image: "🦌" }
+    { name: "Big Game Hunter", cost: 600, stars: 5, description: "Increased pet droprate from entities", starter: "Rifle", image: "🦌" }
   ]
 
   const filteredClasses = classes.filter(classItem => {
