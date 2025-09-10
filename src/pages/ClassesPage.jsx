@@ -21,7 +21,7 @@ const ClassesPage = ({ onPageChange }) => {
     { name: "Decorator", cost: 40, stars: 2, description: "Furniture trader with decorative items", starter: "Hammer", image: "🔨" },
     { name: "Support", cost: 45, stars: 2, description: "Bonds with players for mutual benefits", starter: "Bandage", image: "🤝" },
     { name: "Fisherman", cost: 50, stars: 2, description: "Fishing rod casts faster", starter: "Fishing Rod", image: "🎣" },
-	{ name: "Gambler", cost: 55, stars: 3, description: "50/50 chance of upgrading/downgrading standard chests on opening it: "Random Item", image: "🎲" },
+	{ name: "Gambler", cost: 55, stars: 3, description: "50/50 chance of upgrading/downgrading standard chests on opening it", starter: "Random Item", image: "🎲" },
     { name: "Ranger", cost: 70, stars: 3, description: "Start with 18 ammo", starter: "Flashlight & Revolver", image: "🌲" },
     { name: "Lumberjack", cost: 70, stars: 3, description: "Bonus saplings from trees", starter: "Good Axe", image: "🪓" },
     { name: "Farmer", cost: 80, stars: 3, description: "Use watering can for faster crop growth", starter: "Watering Can", image: "🌱" },
