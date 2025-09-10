@@ -98,7 +98,7 @@ const GameMechanicsPage = () => {
         "Click to attack with melee weapons",
         "Different weapons have different damage and speed",
         "Timing is crucial for effective combat",
-        "Some enemies have specific weaknesses"
+        "Some enemies have specific weaknesses - Aim for the head"
       ]
     },
     {
@@ -106,6 +106,7 @@ const GameMechanicsPage = () => {
       mechanics: [
         "Aim and click to shoot ranged weapons",
         "Ammo is limited and must be managed",
+		"Reload your Gun after a kill",
         "Different ammo types for different weapons",
         "Reload times vary by weapon type"
       ]
