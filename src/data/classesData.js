@@ -67,7 +67,7 @@ export const classesData = {
     }
   },
 
-"camper": {
+"Scavenger": {
     name: "Scavenger",
     cost: 25,
     stars: 2,
