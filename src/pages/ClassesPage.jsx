@@ -13,7 +13,7 @@ const ClassesPage = ({ onPageChange }) => {
 
   const classes = [
     { name: "Camper", cost: 10, stars: 1, description: "Basic survival class with reduced hunger drain", starter: "Flashlight", image: "🏕️" },
-    { name: "Scavenger", cost: 25, stars: 1, description: "extra bag space", starter: "None", image: "🔍" },
+    { name: "Scavenger", cost: 25, stars: 22, description: "extra bag space", starter: "None", image: "🔍" },
     { name: "Base Defender", cost: 40, stars: 2, description: "Can upgrade traps and defenses", starter: "2 defense blueprints", image: "🛡️" },
     { name: "Medic", cost: 40, stars: 2, description: "Faster revival and improved recovery", starter: "Bandage", image: "🏥" },
     { name: "Cook", cost: 40, stars: 2, description: "Seasoned food restores more hunger", starter: "Seasoning", image: "👨‍🍳" },

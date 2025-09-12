@@ -67,6 +67,72 @@ export const classesData = {
     }
   },
 
+"camper": {
+    name: "Scavenger",
+    cost: 25,
+    stars: 2,
+    image: "️🔍",
+    description: "Resourceful survivor with increased inventory space and faster chest opening",
+    starterItems: ["+2 Bag space"],
+    playstyle: "Resource Gathering and Exploration",
+    difficulty: "Easy",
+    
+    levels: {
+      1: {
+        perks: ["+2 Sack Space"],
+        requirements: "Purchase class for 25 diamonds"
+      },
+      2: {
+        perks: ["Chests open 20% faster"],
+        requirements: "Scrap Scrapped: 0/450 Studs Travelled: 0/2500"
+      },
+      3: {
+        perks: ["Chance to get scrap as a bonus drop from chests"],
+        requirements: "Scrapped: 0/1000 Studs Travelled: 0/10000"
+      }
+    },
+    
+    guide: {
+      overview: "The Scavenger is an excellent early-game class focused on resource acquisition and exploration. While lacking a starter item, their increased inventory space and faster chest opening abilities make them invaluable for gathering supplies quickly. They are ideal for players who enjoy exploring and building up their base.",
+      
+      strengths: [
+        "Increased inventory space for more loot",
+        "Faster chest opening for quick resource gathering",
+        "Good for early game resource accumulation",
+        "Affordable cost (25 diamonds)"
+      ],
+      
+      weaknesses: [
+       "No starter item, making early game slightly harder",
+        "Limited combat abilities",
+        "Dependent on finding chests and resources",
+        "Less effective in direct combat situations",
+        "Does not directly contribute to base defense or offense"
+      ],
+      
+      tips: [
+        "Prioritize finding chests and loot spawns",
+        "Focus on resource gathering during the day",
+        "Avoid direct combat when possible",
+        "Utilize your increased inventory to carry more essential items",
+        "Explore new areas to find hidden caches"
+      ],
+      
+      synergies: [
+        "Pairs well with Base Defender for resource contribution",
+        "Cook benefits from Scavenger's resource gathering",
+        "Can supply other classes with needed materials",
+        "Medic can keep Scavenger safe during exploration"
+      ],
+      
+      counters: [
+        "Vulnerable to aggressive enemies due to lack of combat perks",
+        "Struggles in situations requiring quick combat response",
+        "Less useful if resources are scarce or already gathered by others"
+      ]
+    }
+  },
+
   "pyromaniac": {
     name: "Pyromaniac",
     cost: 600,
@@ -266,6 +332,256 @@ export const classesData = {
     }
   },
   
+  "chef": {
+    name: "Chef",
+    cost: 150,
+    stars: 4,
+    image: "🍳",
+    description: "Culinary expert providing powerful food buffs and healing to the team",
+    starterItems: ["Chef Station Blueprint", "Recipe Book"],
+    playstyle: "Support and Resource Management",
+    difficulty: "Medium",
+    
+    levels: {
+      1: {
+        perks: ["Can cook unique recipes that give huge bonuses", "All cooked items are seasoned"],
+        requirements: "Purchase class for 150 diamonds"
+      },
+      2: {
+        perks: ["Unlocks a new recipe", "Cooking speed increased by 25%"],
+        requirements: "Cook 200 food + 50 special dishes"
+      },
+      3: {
+        perks: ["Unlocks an additional new recipe", "Cooked food provides passive health regeneration"],
+        requirements: "Cook 400 food + 100 special dishes"
+      }
+    },
+    
+    guide: {
+      overview: "The Chef class is essential for long-term survival, specializing in preparing powerful food items that provide significant buffs and healing to the team. A skilled Cook can turn the tide of a long run by ensuring the team is well-fed and buffed.",
+      
+      strengths: [
+        "Provides powerful buffs and healing through food",
+        "Essential for long survival runs",
+        "Unlocks unique recipes",
+        "Supports entire team with food benefits"
+      ],
+      
+      weaknesses: [
+        "Limited combat abilities",
+        "Dependent on raw food resources",
+        "Requires time to cook, making them vulnerable",
+        "Less effective in direct combat situations",
+        "High cost (150 diamonds)"
+      ],
+      
+      tips: [
+        "Prioritize gathering raw food ingredients",
+        "Set up cooking station in a safe, defended area",
+        "Cook in batches to maximize efficiency",
+        "Share food with teammates to maximize buffs",
+        "Coordinate with Scavenger for resource supply"
+      ],
+      
+      synergies: [
+        "Pairs perfectly with Scavenger or Hunter for resource gathering",
+        "Medic can protect Cook while cooking",
+        "Provides essential buffs for combat classes like Pyromaniac and Assassin",
+        "Base Defender can provide a safe cooking environment"
+      ],
+      
+      counters: [
+        "Vulnerable when cooking due to stationary nature",
+        "Less useful if raw food resources are scarce"
+      ]
+    }
+  },
+
+  "hunter": {
+    name: "Hunter",
+    cost: 40,
+    stars: 2,
+    image: "🏹",
+    description: "",
+    starterItems: ["2 Bear Traps"],
+    playstyle: "Resource Gathering",
+    difficulty: "Easy-Medium",
+    
+    levels: {
+      1: {
+        perks: ["Increased meat droprate"],
+        requirements: "Purchase class for 40 diamonds"
+      },
+      2: {
+        perks: ["Slightly higher pelt droprate"],
+        requirements: "Kill bunnies: 0/120 Kill wolves: 0/120"
+      },
+      3: {
+        perks: ["The pelt trader will offer an extra wolf pelt trade"],
+        requirements: "Kill Alpha wolves: 0/120 Kill Wolves: 0/250"
+      }
+    },
+    
+    guide: {
+      overview: "The Hunter class is crucial for sustainable food supply and resource gathering. Specializing in hunting animals, they provide essential meat for cooking and survival. Their ranged combat abilities also make them effective in defending the base.",
+      
+      strengths: [
+        "Efficient meat gathering",
+        "Extra pelts for banages and winter gear",
+        "Good for solo play and team support",
+        "Affordable cost (40 diamonds)"
+      ],
+      
+      weaknesses: [
+        "Dependent on finding animals",
+        "No direct base building or healing perks"
+      ],
+      
+      tips: [
+        "Prioritize hunting during the day",
+        "Coordinate with Cook/Chef for food processing",
+
+      ],
+      
+      synergies: [
+        "Pairs perfectly with Cook/Chef for food supply",
+        "Medic can heal after hunting dangerous animals",
+      ],
+      
+      counters: [
+        "Less effective if animal spawns are low",
+      ]
+    }
+  },
+
+  "big-game-hunter": {
+    name: "Big Game Hunter",
+    cost: 600,
+    stars: 5,
+    image: "🦌",
+    description: "Elite hunter specializing in taking down large, dangerous creatures",
+    starterItems: ["Rifle", "+ Ammo"],
+    playstyle: "Hunting and Ranged Combat",
+    difficulty: "Hard",
+    
+    levels: {
+      1: {
+        perks: ["Can consune animal pelts to gain permanent bonuses"],
+        requirements: "Purchase class for 600 diamonds"
+      },
+      2: {
+        perks: ["Higher pelt drop rate"],
+        requirements: "Kill wolves: 0/70 Animal pelts used: 0/50"	
+      },
+      3: {
+        perks: ["You can infinitely consume mammoth tusks to permanently gain health"],
+        requirements: Kill wolves: 0/150 Animal pelts used: 0/100
+      }
+    },
+    
+    guide: {
+      overview: "The Big Game Hunter is a formidable class designed for players who want to take on the most dangerous creatures in the forest. They excel at single-target elimination.",
+      
+      strengths: [
+		"Consuming as many pelts as they can get to gain buffs",
+       
+      ],
+      
+      weaknesses: [
+        "Very expensive (600 diamonds)",
+           "Dependent on ammunition supply",
+        "Requires precise aim and tactical positioning",
+        "Limited utility outside of combat"
+      ],
+      
+      tips: [
+    
+        "Always carry plenty of ammunition",
+        "Focus fire on large creatures during team fights",
+        "Coordinate with teammates for crowd control"
+      ],
+      
+      synergies: [
+        "Pairs well with Medic for sustained combat",
+        "Base Defender can provide cover during engagements",
+        "Scavenger can help gather rare resources for upgrades",
+        "Cook can provide buffs to enhance combat performance"
+      ],
+      
+      counters: [
+        "Struggles against fast-moving, numerous enemies",
+        "Vulnerable if caught off guard by smaller threats",
+        "Less useful in resource-gathering focused runs"
+      ]
+    }
+  },
+
+  "decorator": {
+    name: "Decorator",
+    cost: 40,
+    stars: 1,
+    image: "🎨",
+    description: "Aesthetic specialist focused on base customization and visual enhancements",
+    starterItems: ["Paint Brush"],
+    playstyle: "Aesthetic and Base Customization",
+    difficulty: "Easy",
+    
+    levels: {
+      1: {
+        perks: ["Can place decorative items", "Paint Brush for customizing base colors"],
+        requirements: "Purchase class for 40 diamonds"
+      },
+      2: {
+        perks: ["Unlocks new decorative blueprints", "Decorative items provide minor morale boost"],
+        requirements: "Place 20 decorative items"
+      },
+      3: {
+        perks: ["Decorative items provide small defensive bonus", "Can change terrain textures within base"],
+        requirements: "Fully customize a base section"
+      }
+    },
+    
+    guide: {
+      overview: "The Decorator class is for players who enjoy personalizing their base and adding a unique touch to their survival experience. While not directly contributing to combat or resource gathering, a well-decorated base can provide morale boosts and minor defensive advantages at higher levels.",
+      
+      strengths: [
+        "Unique base customization options",
+        "Can create visually appealing bases",
+        "Minor morale and defensive boosts at higher levels",
+        "Affordable cost (40 diamonds)",
+        "Adds a creative element to gameplay"
+      ],
+      
+      weaknesses: [
+        "Considered least useful in direct survival scenarios",
+        "No direct combat or resource gathering perks",
+        "Abilities are mostly cosmetic",
+        "Requires resources for decorative items",
+        "Less impactful in early game survival"
+      ],
+      
+      tips: [
+        "Focus on essential survival first before decorating",
+        "Use decorative items to mark important areas",
+        "Coordinate with Base Defender for optimal base layout",
+        "Experiment with different color schemes and textures",
+        "Utilize morale boosts for team benefits"
+      ],
+      
+      synergies: [
+        "Pairs well with Base Defender for a well-fortified and aesthetic base",
+        "Scavenger can help gather resources for decorative items",
+        "Cook can provide food for morale boosts in a comfortable base"
+      ],
+      
+      counters: [
+        "Limited effectiveness against aggressive enemies",
+        "Not suitable for players focused solely on combat or efficiency",
+        "Vulnerable if base is destroyed"
+      ]
+    }
+  },
+
   "ranger": {
     name: "Ranger",
     cost: 70,
