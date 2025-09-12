@@ -475,7 +475,7 @@ export const classesData = {
       },
       3: {
         perks: ["You can infinitely consume mammoth tusks to permanently gain health"],
-        requirements: Kill wolves: 0/150 Animal pelts used: 0/100
+        requirements: "Kill wolves: 0/150 Animal pelts used: 0/100"
       }
     },
     
@@ -489,7 +489,7 @@ export const classesData = {
       
       weaknesses: [
         "Very expensive (600 diamonds)",
-           "Dependent on ammunition supply",
+        "Dependent on ammunition supply",
         "Requires precise aim and tactical positioning",
         "Limited utility outside of combat"
       ],
