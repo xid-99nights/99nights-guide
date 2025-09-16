@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge'
 import { Input } from '@/components/ui/input'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { classesData } from '../classesData'
+import { classesData } from '../../classesData'
 
 const ClassesPage = ({ onPageChange }) => {
   const [searchTerm, setSearchTerm] = useState('')
