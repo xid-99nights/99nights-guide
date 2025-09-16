@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Progress } from '@/components/ui/progress'
-import { classesData } from '../classesData' // Import the classesData array directly
+import { classesData } from '../../classesData' // Import the classesData array directly
 
 const ClassDetailPage = ({ className, onPageChange }) => {
   // Find the class data based on the className prop
