@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Hammer, Sword, Fish, Home, Cog, Zap, Heart, Shield } from 'lucide-react'
+import { Hammer, Sword, Fish, Home, Cog, Zap, Heart, Shield, Calendar, Award } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
@@ -25,10 +25,10 @@ const GameMechanicsPage = () => {
       description: "Understand combat mechanics and survival strategies"
     },
     {
-      id: "fishing",
-      title: "Fishing Guide",
-      icon: Fish,
-      description: "Complete guide to fishing mechanics and locations"
+      id: "updates",
+      title: "Updates & Badges",
+      icon: Calendar,
+      description: "Stay up-to-date with the latest game changes and achievements"
     }
   ]
 // Crafting TAB
@@ -121,25 +121,31 @@ const GameMechanicsPage = () => {
     }
   ]
 
-  const fishingGuide = {
-    basics: [
-      "Obtain a fishing rod from a Fishing Hut",
-      "Find a body of water (lakes, rivers, ponds)",
-      "Cast your line and wait for a bite",
-      "Click when you see the bobber move"
-    ],
-    locations: [
-      { name: "Main Lake", difficulty: "Easy", fish: ["Bass", "Trout"] },
-      { name: "Forest Streams", difficulty: "Medium", fish: ["Salmon", "Pike"] },
-      { name: "Hidden Pond", difficulty: "Hard", fish: ["Rare Fish", "Golden Fish"] }
-    ],
-    tips: [
-      "Different fish are active at different times",
-      "Weather affects fishing success rates",
-      "Upgrade your rod for better catches",
-      "Some fish are required for specific recipes"
-    ]
-  }
+  const updates = [
+    { date: "13/9/2025", name: "Volcano Update", features: ["New Volcano Biome", "New enemies: Mega Cultist, Scorpion", "New items: Inferno Sword, Wildfire Potion"] },
+    { date: "5/9/2025", name: "Labor Day 2025", features: ["New limited-time items and badges"] },
+    { date: "30/8/2025", name: "Talents Update", features: ["New Talents system for class upgrades", "New classes: Support, Gambler, Chef, Big Game Hunter"] },
+    { date: "22/8/2025", name: "Frog Invasion", features: ["New Frog Invasion event", "New class: Poison Master"] },
+    { date: "15/8/2025", name: "The Fishing Update", features: ["New fishing mechanic", "New classes: Fisher, Pyromaniac"] },
+    { date: "8/8/2025", name: "The Base Update", features: ["New base defense items", "New classes: Base Defender, Berserker"] },
+    { date: "1/8/2025", name: "Snow Biome Update", features: ["New Snow Biome", "New enemies and resources"] },
+    { date: "25/7/2025", name: "The Farming Update", features: ["New farming mechanics", "New classes: Farmer, Blacksmith"] },
+    { date: "18/7/2025", name: "Alien Invasion 2025", features: ["New Alien Invasion event", "New classes: Alien, Cyborg"] },
+    { date: "11/7/2025", name: "The Furniture Update", features: ["New furniture items for base decoration", "New class: Decorator"] },
+    { date: "4/7/2025", name: "4th of July 2025", features: ["New limited-time items and badges", "New classes: Hunter, Brawler"] },
+    { date: "27/6/2025", name: "The Class Update", features: ["Initial release of the class system", "Core classes introduced: Camper, Scavenger, Medic, Cook, Ranger, Lumberjack, Assassin"] }
+  ]
+
+  const badges = [
+    { name: "Day 10", description: "Survive for 10 days.", reward: "10 Diamonds" },
+    { name: "Day 25", description: "Survive for 25 days.", reward: "25 Diamonds" },
+    { name: "Day 50", description: "Survive for 50 days.", reward: "50 Diamonds" },
+    { name: "Day 99", description: "Survive for 99 days.", reward: "100 Diamonds" },
+    { name: "Vegetarian", description: "Survive for 15 days without eating meat.", reward: "30 Diamonds" },
+    { name: "Lone Wolf", description: "Survive for 25 days in a solo server.", reward: "50 Diamonds" },
+    { name: "Cultist Slayer", description: "Clear the Cultist Stronghold.", reward: "75 Diamonds" },
+    { name: "Child Rescuer", description: "Rescue all four missing children.", reward: "150 Diamonds" }
+  ]
 
   return (
     <div className="space-y-8">
@@ -178,7 +184,7 @@ const GameMechanicsPage = () => {
           <TabsTrigger value="crafting" className="data-[state=active]:bg-green-600">Crafting</TabsTrigger>
           <TabsTrigger value="building" className="data-[state=active]:bg-green-600">Building</TabsTrigger>
           <TabsTrigger value="combat" className="data-[state=active]:bg-green-600">Combat</TabsTrigger>
-          <TabsTrigger value="fishing" className="data-[state=active]:bg-green-600">Fishing</TabsTrigger>
+          <TabsTrigger value="updates" className="data-[state=active]:bg-green-600">Updates & Badges</TabsTrigger>
         </TabsList>
 
         <TabsContent value="crafting" className="space-y-6">
@@ -290,118 +296,59 @@ const GameMechanicsPage = () => {
           </Card>
         </TabsContent>
 
-        <TabsContent value="fishing" className="space-y-6">
+        <TabsContent value="updates" className="space-y-6">
           <Card className="bg-black/20 border-green-700/30 backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="text-white flex items-center">
-                <Fish className="w-6 h-6 text-orange-400 mr-2" />
-                Fishing Guide
+                <Calendar className="w-6 h-6 text-orange-400 mr-2" />
+                Recent Updates
               </CardTitle>
               <CardDescription className="text-green-200">
-                Complete guide to fishing mechanics and the best fishing spots
+                Stay informed about the latest game updates and new content.
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-3">Fishing Basics</h3>
-                  <div className="space-y-2">
-                    {fishingGuide.basics.map((basic, index) => (
-                      <div key={index} className="flex items-start space-x-2">
-                        <div className="w-6 h-6 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
-                          <span className="text-white text-xs font-bold">{index + 1}</span>
-                        </div>
-                        <span className="text-green-200">{basic}</span>
-                      </div>
-                    ))}
+              <div className="space-y-4">
+                {updates.map((update, index) => (
+                  <div key={index} className="bg-black/30 rounded-lg p-4 border border-green-700/20">
+                    <h4 className="font-semibold text-orange-400">{update.name} <span className="text-sm text-green-300">({update.date})</span></h4>
+                    <ul className="list-disc list-inside text-green-200 text-sm">
+                      {update.features.map((feature, featIndex) => (
+                        <li key={featIndex}>{feature}</li>
+                      ))}
+                    </ul>
                   </div>
-                </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
 
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-3">Fishing Locations</h3>
-                  <div className="grid md:grid-cols-3 gap-4">
-                    {fishingGuide.locations.map((location, index) => (
-                      <div key={index} className="bg-black/30 rounded-lg p-4 border border-green-700/20">
-                        <h4 className="font-semibold text-orange-400">{location.name}</h4>
-                        <Badge variant="outline" className={`mb-2 ${
-                          location.difficulty === 'Easy' ? 'border-green-500 text-green-300' :
-                          location.difficulty === 'Medium' ? 'border-yellow-500 text-yellow-300' :
-                          'border-red-500 text-red-300'
-                        }`}>
-                          {location.difficulty}
-                        </Badge>
-                        <div className="space-y-1">
-                          {location.fish.map((fish, fishIndex) => (
-                            <div key={fishIndex} className="text-green-200 text-sm">• {fish}</div>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
+          <Card className="bg-black/20 border-green-700/30 backdrop-blur-sm">
+            <CardHeader>
+              <CardTitle className="text-white flex items-center">
+                <Award className="w-6 h-6 text-orange-400 mr-2" />
+                Badges & Achievements
+              </CardTitle>
+              <CardDescription className="text-green-200">
+                Complete challenges to earn badges and valuable rewards.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="grid md:grid-cols-2 gap-4">
+                {badges.map((badge, index) => (
+                  <div key={index} className="bg-black/30 rounded-lg p-4 border border-green-700/20">
+                    <h4 className="font-semibold text-orange-400">{badge.name}</h4>
+                    <p className="text-green-200 text-sm mb-2">{badge.description}</p>
+                    <Badge variant="outline" className="border-orange-500 text-orange-400 text-xs">
+                      {badge.reward}
+                    </Badge>
                   </div>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-3">Pro Tips</h3>
-                  <div className="grid md:grid-cols-2 gap-2">
-                    {fishingGuide.tips.map((tip, index) => (
-                      <div key={index} className="flex items-start space-x-2">
-                        <div className="w-2 h-2 bg-orange-400 rounded-full flex-shrink-0 mt-2"></div>
-                        <span className="text-green-200">{tip}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                ))}
               </div>
             </CardContent>
           </Card>
         </TabsContent>
       </Tabs>
-
-      {/* Advanced Tips */}
-      <section className="bg-black/20 backdrop-blur-sm rounded-lg border border-green-700/30 p-6">
-        <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-          <Cog className="w-6 h-6 text-orange-400 mr-2" />
-          Advanced Mechanics
-        </h2>
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="space-y-3">
-            <h3 className="font-semibold text-orange-400 flex items-center">
-              <Heart className="w-4 h-4 mr-2" />
-              Health System
-            </h3>
-            <ul className="space-y-1 text-green-200 text-sm">
-              <li>• Health regenerates slowly over time</li>
-              <li>• Food restores health and hunger</li>
-              <li>• Medical items provide instant healing</li>
-              <li>• Some classes have healing bonuses</li>
-            </ul>
-          </div>
-          <div className="space-y-3">
-            <h3 className="font-semibold text-orange-400 flex items-center">
-              <Zap className="w-4 h-4 mr-2" />
-              Energy System
-            </h3>
-            <ul className="space-y-1 text-green-200 text-sm">
-              <li>• Actions consume energy</li>
-              <li>• Rest near campfire to recover</li>
-              <li>• Food provides energy restoration</li>
-              <li>• Low energy affects performance</li>
-            </ul>
-          </div>
-          <div className="space-y-3">
-            <h3 className="font-semibold text-orange-400 flex items-center">
-              <Shield className="w-4 h-4 mr-2" />
-              Damage Types
-            </h3>
-            <ul className="space-y-1 text-green-200 text-sm">
-              <li>• Physical damage from weapons</li>
-              <li>• Environmental damage from hazards</li>
-              <li>• Deer attacks deal massive damage</li>
-              <li>• Armor reduces incoming damage</li>
-            </ul>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import { ArrowRight, Users, Map, Cog, Target, Star, Clock, Diamond } from 'lucide-react'
+import { ArrowRight, Users, Map, Cog, Target, Star, Clock, Diamond, BookOpen, Info } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -144,7 +144,7 @@ const HomePage = ({ onPageChange }) => {
           <p className="text-green-200">Jump to the section you need most</p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <Card 
             className="bg-black/20 border-green-700/30 backdrop-blur-sm hover:bg-black/30 transition-all duration-300 cursor-pointer group"
             onClick={() => onPageChange('getting-started')}
@@ -177,7 +177,7 @@ const HomePage = ({ onPageChange }) => {
 
           <Card 
             className="bg-black/20 border-green-700/30 backdrop-blur-sm hover:bg-black/30 transition-all duration-300 cursor-pointer group"
-            onClick={() => onPageChange('world')}
+            onClick={() => onPageChange('world-guide')}
           >
             <CardHeader>
               <Map className="w-8 h-8 text-orange-400 mb-2" />
@@ -186,6 +186,36 @@ const HomePage = ({ onPageChange }) => {
               </CardTitle>
               <CardDescription className="text-green-200">
                 Explore locations, entities, items, and hidden secrets
+              </CardDescription>
+            </CardHeader>
+          </Card>
+
+          <Card 
+            className="bg-black/20 border-green-700/30 backdrop-blur-sm hover:bg-black/30 transition-all duration-300 cursor-pointer group"
+            onClick={() => onPageChange('strategies')}
+          >
+            <CardHeader>
+              <BookOpen className="w-8 h-8 text-orange-400 mb-2" />
+              <CardTitle className="text-white group-hover:text-orange-400 transition-colors">
+                Strategies
+              </CardTitle>
+              <CardDescription className="text-green-200">
+                Tips, tricks, and advanced tactics for survival
+              </CardDescription>
+            </CardHeader>
+          </Card>
+
+          <Card 
+            className="bg-black/20 border-green-700/30 backdrop-blur-sm hover:bg-black/30 transition-all duration-300 cursor-pointer group"
+            onClick={() => onPageChange('game-info')}
+          >
+            <CardHeader>
+              <Info className="w-8 h-8 text-orange-400 mb-2" />
+              <CardTitle className="text-white group-hover:text-orange-400 transition-colors">
+                Game Info
+              </CardTitle>
+              <CardDescription className="text-green-200">
+                Latest updates, patches, and achievements
               </CardDescription>
             </CardHeader>
           </Card>

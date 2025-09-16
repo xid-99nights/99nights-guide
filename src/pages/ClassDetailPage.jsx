@@ -2,13 +2,14 @@ import { useState } from 'react'
 import { ArrowLeft, Star, Diamond, Target, Shield, Zap, Users, AlertTriangle, CheckCircle, XCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
+import { Badge } = '@/components/ui/badge'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Progress } from '@/components/ui/progress'
-import { getClassByName } from '../data/classesData'
+import { classesData } from '../classesData' // Import the classesData array directly
 
 const ClassDetailPage = ({ className, onPageChange }) => {
-  const classData = getClassByName(className)
+  // Find the class data based on the className prop
+  const classData = classesData.find(c => c.name.toLowerCase().replace(/\s+/g, '-') === className);
   
   if (!classData) {
     return (

@@ -5,37 +5,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge'
 import { Input } from '@/components/ui/input'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+import { classesData } from '../classesData'
 
 const ClassesPage = ({ onPageChange }) => {
   const [searchTerm, setSearchTerm] = useState('')
   const [starFilter, setStarFilter] = useState('all')
   const [priceFilter, setPriceFilter] = useState('all')
 
-  const classes = [
-    { name: "Camper", cost: 10, stars: 1, description: "Basic survival class with reduced hunger drain", starter: "Flashlight", image: "🏕️" },
-    { name: "Scavenger", cost: 25, stars: 22, description: "extra bag space", starter: "None", image: "🔍" },
-    { name: "Base Defender", cost: 40, stars: 2, description: "Can upgrade traps and defenses", starter: "2 defense blueprints", image: "🛡️" },
-    { name: "Medic", cost: 40, stars: 2, description: "Faster revival and improved recovery", starter: "Bandage", image: "🏥" },
-    { name: "Cook", cost: 40, stars: 2, description: "Seasoned food restores more hunger", starter: "Seasoning", image: "👨‍🍳" },
-    { name: "Hunter", cost: 40, stars: 2, description: "Increased meat drops from animals", starter: "Bear Trap", image: "🏹" },
-    { name: "Decorator", cost: 40, stars: 2, description: "Furniture trader with decorative items", starter: "Hammer", image: "🔨" },
-    { name: "Support", cost: 45, stars: 2, description: "Bonds with players for mutual benefits", starter: "Bandage", image: "🤝" },
-    { name: "Fisherman", cost: 50, stars: 2, description: "Fishing rod casts faster", starter: "Fishing Rod", image: "🎣" },
-	{ name: "Gambler", cost: 55, stars: 3, description: "50/50 chance of upgrading/downgrading standard chests on opening it", starter: "Random Item", image: "🎲" },
-    { name: "Ranger", cost: 70, stars: 3, description: "Start with 18 ammo", starter: "Flashlight & Revolver", image: "🌲" },
-    { name: "Lumberjack", cost: 70, stars: 3, description: "Bonus 1 extra log from trees", starter: "Good Axe", image: "🪓" },
-    { name: "Farmer", cost: 80, stars: 3, description: "Use watering can for faster crop growth", starter: "Watering Can", image: "🌱" },
-	{ name: "Brawler", cost: 100, stars: 3, description: "Can't use ranged weapons but deals more damage", starter: "Leather Body", image: "👊" },
-    { name: "Alien", cost: 100, stars: 3, description: "Night Sight and Alien Tech ", starter: "RayGun", image: "👽" },
-    { name: "Berserker", cost: 100, stars: 3, description: "auto-revive with low HP and hunger", starter: "Medkit", image: "⚔️" },
-    { name: "Chef", cost: 150, stars: 4, description: "Chef station and recipe book for advanced cooking", starter: "Chef Station Blueprint & Recipe Book", image: "👨‍🍳" },
-	{ name: "Blacksmith", cost: 200, stars: 4, description: "You can craft items in the next crafting bench tier", starter: "Hammer", image: "🛠️" },
-	{ name: "Poison Master", cost: 200, stars: 4, description: "Your poison effects are stronger", starter: "Blowpipe and Armor", image: "☠️" },
-    { name: "Assassin", cost: 500, stars: 5, description: "Stealth specialist with unique Katana", starter: "Katana + 120x throwing knives", image: "🗡️" },
-    { name: "Cyborg", cost: 600, stars: 5, description: "Block incoming damage with advanced tech", starter: "Alien Armor + Laser Connon", image: "🤖" },
-    { name: "Pyromaniac", cost: 600, stars: 5, description: "Master of fire with exclusive Flamethrower", starter: "Flamethrower", image: "🔥" },
-    { name: "Big Game Hunter", cost: 600, stars: 5, description: "Increased pet droprate from entities", starter: "Rifle", image: "🦌" }
-  ]
+  const classes = classesData; // Use the imported comprehensive class data
 
   const filteredClasses = classes.filter(classItem => {
     const matchesSearch = classItem.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -79,7 +56,7 @@ const ClassesPage = ({ onPageChange }) => {
           Classes Guide
         </h1>
         <p className="text-xl text-green-200 max-w-3xl mx-auto">
-          Master all 23 classes in 99 Nights in the Forest. Each class offers unique perks, 
+          Master all {classes.length} classes in 99 Nights in the Forest. Each class offers unique perks, 
           starter items, and progression paths to enhance your survival experience.
         </p>
       </section>
@@ -186,7 +163,7 @@ const ClassesPage = ({ onPageChange }) => {
               
               <div className="text-center">
                 <Badge variant="secondary" className="bg-green-700/30 text-green-300 text-xs">
-                  Starter: {classItem.starter}
+                  Starter: {classItem.starterItems.join(', ')}
                 </Badge>
               </div>
               
