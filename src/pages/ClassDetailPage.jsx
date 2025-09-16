@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { ArrowLeft, Star, Diamond, Target, Shield, Zap, Users, AlertTriangle, CheckCircle, XCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } = '@/components/ui/badge'
+import { Badge } from '@/components/ui/badge'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Progress } from '@/components/ui/progress'
 import { classesData } from '../classesData' // Import the classesData array directly
