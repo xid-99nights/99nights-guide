@@ -107,107 +107,6 @@ Furniture Trader improvement
 You can now rotate structures on blueprint`,
     description: "Time to decorate your base! We're adding a bunch of new stuff to help personalize your base - Loads of new furniture items - The furniture trader now offers more items, and higher stock"
   },
-
-  {
-    name: "Meteor Shower",
-    date: "27/9/2025",
-    content: `~Additional Changes~
-
-☆ Locations
-Meteor craters
-Meteor Anvil/ Forge/ Tool Workshop
-
-☆ Entities
-Meteor Crab
-
-☆ Items
-Meteor Shard
-Gold Shard
-Obsidiron Ore
-Scalding Obsidiron Ingot
-Obsidiron ingot
-Morsel?
-Obsidiron Hammer
-Obsidiron Body
-Obsidiron Boots
-Armor Trim
-Axe Trim
-
-☆ Badges
-"Astrogeology" Badge
-"Exogeology" Badge
-"Seismology" Badge
-"Astrophysics" Badge
-
-☆ Chests
-Obsidiron Chest`,
-    description: "Meteors are falling from the sky, perhaps they can be interacted with?"
-  },
-  {
-    name: "Volcanic Biome Part 2",
-    date: "20/9/2025",
-    content: `☆ Entities
-The Ram
-Cultist King
-Lava Mammoth
-
-☆ Items
-Infernal Crossbow
-King Cultist's Mace
-Scorpion Shell
-Sacrifice Totem
-Cultist King's Antler
-Fire Bandit
-
-☆ Badges
-"Usurpation" Badge`,
-    description: "In the depths of the volcanic biome, something is stirring. The creature is rumored to have a rage that cannot be controlled. Anyone smart will stay far away from it. Even the Deer and the Owl won't go near it"
-  },
-  {
-    name: "Volcanic Biome Part 1",
-    date: "13/9/2025",
-    content: `~Additional Changes~
-- Removed Snow Biome.
-
-☆ Items
-Infernal Sword
-Wildfire Potion
-Infernal Sack
-Crossbow
-
-☆ Entities
-Scorpion
-
-☆ Locations
-Volcanic Biome
-
-☆ Chests
-Infernal Chest
-Hot Chest
-
-☆ Badges
-"Resourcefulness" Badge
-"Pest Control" Badge
-"Metaworking" Badge
-"Volcanology" Badge`,
-    description: "Introducing the new biome: the Volcanic biome. Find new challenges and the volcano! The biome will replace the snow biome for the next two weeks while we introduce it, and then it will be random."
-  },
-  {
-    name: "Decoration Update",
-    date: "6/9/2025",
-    content: `~Additional Changes~
-
-☆ Items
-Paint Brush
-
-☆ Entities
-Furniture Trader improvement
-
-☆ Other
-60+ furnitures
-You can now rotate structures on blueprint`,
-    description: "Time to decorate your base! We're adding a bunch of new stuff to help personalize your base - Loads of new furniture items - The furniture trader now offers more items, and higher stock"
-  },
   {
     name: "2x Gem Weekend + Classes MK II",
     date: "30/8/2025",
@@ -492,26 +391,9 @@ Gem Collector
 "Gemology" Badge`,
     description: "The gem shop now includes new packs and fragments. A new class, Gem Collector, has been added for those who love shiny things."
   },
-  {
-    name: "Mini Update",
-    date: "19/7/2025",
-    content: `~Additional Changes~
-
-☆ Items
-Campfire Kit
-Portable Chest
-
-☆ Entities
-Wandering Trader
-
-☆ Badges
-"Nomad" Badge`,
-    description: "A small update focused on mobility and survival. Great for players who prefer roaming over base-building."
-  },
 
 // Add More updates 
 ];
-
 
 const UpdateLog: React.FC = () => {
   return (
