@@ -391,8 +391,6 @@ Gem Collector
 "Gemology" Badge`,
     description: "The gem shop now includes new packs and fragments. A new class, Gem Collector, has been added for those who love shiny things."
   },
-
-// Add More updates 
 ];
 
 const UpdateLog: React.FC = () => {
