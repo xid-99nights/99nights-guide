@@ -107,7 +107,7 @@ Furniture Trader improvement
 You can now rotate structures on blueprint`,
     description: "Time to decorate your base! We're adding a bunch of new stuff to help personalize your base - Loads of new furniture items - The furniture trader now offers more items, and higher stock"
   },
-  const updates: UpdateData[] = [
+
   {
     name: "Meteor Shower",
     date: "27/9/2025",
@@ -507,9 +507,9 @@ Wandering Trader
 ☆ Badges
 "Nomad" Badge`,
     description: "A small update focused on mobility and survival. Great for players who prefer roaming over base-building."
-  }
+  },
 
-
+// Add More updates 
 ];
 
 
