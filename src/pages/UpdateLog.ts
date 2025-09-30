@@ -403,6 +403,7 @@ const UpdateLog: React.FC = () => {
         <thead>
           <tr>
             <th>Name</th>
+			<th>Date</th>
             <th>Content</th>
             <th>Description</th>
           </tr>
@@ -411,6 +412,7 @@ const UpdateLog: React.FC = () => {
           {updates.map((update, index) => (
             <tr key={index}>
               <td>{update.name}</td>
+			  <td>{update.date}</td> 
               <td>{update.content}</td>
               <td>{update.description}</td>
             </tr>
