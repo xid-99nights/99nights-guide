@@ -2,6 +2,7 @@ import React from 'react';
 
 interface UpdateData {
   name: string;
+  date: string;
   content: string;
   description: string;
 }
