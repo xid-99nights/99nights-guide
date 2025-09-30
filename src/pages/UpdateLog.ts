@@ -7,15 +7,16 @@ interface UpdateData {
 }
 
 const updates: UpdateData[] = [
-  { name: "Decoration Update 6/9/2025", content: "~Additional Changes~ ...", description: "Time to decorate your base!..." },
-  // Add more from wiki
+  { name: "Decoration Update 6/9/2025", content: "~Additional Changes~ Added new decorations.", description: "Time to decorate your base!" },
+  // Add more from wiki (e.g., "Balance Update 8/22/2025", etc.)
 ];
 
 const UpdateLog: React.FC = () => {
   return (
     <div className="page-container">
       <h1>Update Log</h1>
-      <table>
+      <p>Track game changes. Pro Tip: Check for balance tweaks affecting strategies.</p>
+      <table className="crafting-table">
         <thead>
           <tr>
             <th>Name</th>
@@ -24,8 +25,8 @@ const UpdateLog: React.FC = () => {
           </tr>
         </thead>
         <tbody>
-          {updates.map((update, i) => (
-            <tr key={i}>
+          {updates.map((update, index) => (
+            <tr key={index}>
               <td>{update.name}</td>
               <td>{update.content}</td>
               <td>{update.description}</td>
