@@ -5,7 +5,13 @@ const Entities: React.FC = () => {
       <p>Entities are a fundamental part of the game 99 Nights in the Forest. On the map, players will always encounter a variety of different entities and animals each with its own differentiation. Some entities may present hostile, passive, or neutral behavior.</p>
       <section>
         <h2>Missing Children</h2>
-        <p>These kids are the children you must rescue as the main objective of the game.</p>
+        <p>Main objective: Rescue Dino/Kraken/Squid/Koala Kids.</p>
+        <ul>
+          <li>Dino Kid</li>
+          <li>Kraken Kid</li>
+          <li>Squid Kid</li>
+          <li>Koala Kid</li>
+        </ul>
       </section>
       <section>
         <h2>Animals</h2>

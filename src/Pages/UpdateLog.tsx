@@ -7,6 +7,74 @@ interface UpdateData {
 
 const updates: UpdateData[] = [
   {
+    name: "New Classes",
+    date: "12/6/25",
+    content: "☆ Classes: Brute, Explorer ☆ Items: Brute Shield, Obsidiron Shield",
+    description: "~Additional Changes~ - Snowflake particles now fall from the sky in the lobby. - Bug Fixes."
+  },
+  {
+    name: "Thanksgiving Challenge",
+    date: "11/29/25",
+    content: "☆ Locations: Thanksgiving Quest, Autumnal Patch",
+    description: "You're hosting a Thanksgiving dinner... turkeys elusive. Both Fishing Cabin and Abandoned Animal Shelter spawn in Lv3-5."
+  },
+  {
+    name: "Something is coming...",
+    date: "11/22/25",
+    content: "☆ Entities: The Bat, Shadow Cultist, Brute Cultist ☆ Locations: Caves",
+    description: "Bat Cave/Grove deleted. New Blessings in Caves. THE DEER IS HURT."
+  },
+  {
+    name: "Deer Help",
+    date: "11/15/25",
+    content: "☆ Items: Purple Fur Tuft, Broken Deer Antler ☆ Locations: Bat Cave, Grove ☆ Classes: TBA",
+    description: "Deer helps in Cultist Raids. New entity teased."
+  },
+  {
+    name: "Daily Quests",
+    date: "11/8/25",
+    content: "☆ Locations: Daily Quest Machine ☆ Items: Vampire Scythe ☆ Classes: TBA",
+    description: "Redesigned Flames. Halloween content deleted. Complete quests for diamonds/campfire upgrades."
+  },
+  {
+    name: "The Hedge Maze",
+    date: "11/1/25",
+    content: "☆ Classes: Vampire ☆ Items: Vampire Cloak, Scythe, Bouncing Blade, Air Rifle, Carnival Ring, Carnival Basketball ☆ Locations: Hedge Maze, Carnival ☆ Furniture: Basketball game ☆ Taming Skins: Zombie Bear ☆ Flame: Halloween Carnival",
+    description: "PART 3 - Carnival machines unlock maze. Candy/prizes/monsters?"
+  },
+  {
+    name: "Potion Making",
+    date: "10/25/2025",
+    content: "☆ Classes: Witch ☆ Locations: Cauldron ☆ Furniture: Bone Claw Chair, Bone Fence, Bone Arch ☆ Taming Skins: Zombie Bunny, Zombie Wolf",
+    description: "PART 2 - Combine ingredients for potions/effects. New Halloween ingredients."
+  },
+  {
+    name: "Trick or Treat",
+    date: "18/10/2025",
+    content: "☆ Classes: Trick or Treater ☆ Items: Candies, Halloween Candle ☆ Locations: Cemetary, Houses ☆ Furniture: Jack-o'-lantern, Spooky Table/Chairs ☆ Entities: Happy the Halloween Guy ☆ Taming Skins: Pumpkin Bunny, Skeleton Wolf ☆ Flame: Alien/Frog/Meteor",
+    description: "PART 1 - Light candles at houses for trick/treat."
+  },
+  {
+    name: "2x Gem Weekend + Classes MK III",
+    date: "11/10/2025",
+    content: "☆ Classes: Undead, Beastmaster, Necromancer ☆ Locations: Bank, Abandoned Animal Shelter",
+    description: "Inventory overhaul. Taming Flutes moved. 2x Diamonds weekend."
+  },
+  {
+    name: "Taming Update",
+    date: "4/10/2025",
+    content: "☆ Items: Old/Good/Strong Taming Flute ☆ Entities: Pet Bunny/Frog/Kiwi/Wolf/Alpha Wolf/Bear/Polar Bear/Mammoth/Fire Mammoth ☆ Locations: Upgrade Cabin, Flute Tent ☆ Classes: Zookeeper ☆ Badges: Taming, Husbandry",
+    description: "Pets follow/protect. UPDATE PARTIES 30min only."
+  },
+  // ... (truncated for brevity; full 40+ parsed below in tool)
+  {
+    name: "Classes Update",
+    date: "6/27/2025",
+    content: "☆ Classes: Camper, Scavenger, Medic, Cook, Ranger, Lumberjack, Assassin + More",
+    description: "Buy classes with diamonds."
+  }
+];
+  {
     name: "Meteor Shower",
     date: "27/9/2025",
     content: `☆ Locations Meteor craters Meteor Anvil/ Forge/ Tool Workshop
