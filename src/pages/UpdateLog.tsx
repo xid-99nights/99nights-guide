@@ -72,8 +72,7 @@ const updates: UpdateData[] = [
     date: "6/27/2025",
     content: "☆ Classes: Camper, Scavenger, Medic, Cook, Ranger, Lumberjack, Assassin + More",
     description: "Buy classes with diamonds."
-  }
-];
+  },
   {
     name: "Meteor Shower",
     date: "27/9/2025",

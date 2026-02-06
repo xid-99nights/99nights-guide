@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
+import Navbar from './Components/Navbar';
 import Home from './pages/Home';
 import Items from './pages/Items';
 import Entities from './pages/Entities';
@@ -14,8 +14,9 @@ import UpdateLog from './pages/UpdateLog';
 import TipsAndTricks from './pages/TipsAndTricks';
 import Fishing from './pages/Fishing';
 import TierLists from './pages/TierLists.mdx';
+import SpeedInsights from './pages/SpeedInsights';
 import './Components/App.css';
-import Search from './components/Search';
+import Search from './Components/Search';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
             <Route path="/tips-and-tricks" element={<TipsAndTricks />} />
             <Route path="/fishing" element={<Fishing />} />
             <Route path="/tier-lists" element={<TierLists />} />
+            <Route path="/speed-insights" element={<SpeedInsights />} />
           </Routes>
         </main>
       </div>
