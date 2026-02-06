@@ -1,0 +1,1 @@
+# Chests Tier List\n\nLoot quality.\n\n## S Tier\n- Obsidiron Chest: Endgame loot.\n- Diamond Chest: Gems.\n- Alien Chest: Tech.\n\n## A Tier\n- Infernal/Hot Chest.\n- Frog Chest.\n\n## B Tier\n- Ice/Cold, Bone.\n\n## C Tier\n- Basic chests.\n\n**Gambler boosts odds.**

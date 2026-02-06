@@ -1,0 +1,1 @@
+# Badges Tier List\n\nUnlock value.\n\n## S Tier\n- Astrogeology/Exogeology: Meteor tools.\n- Usurpation: Ram boss.\n\n## A Tier\n- Xenology: Alien gear.\n- Beastmaster: Taming.\n\n## B Tier\n- Fishing badges: Rod upgrades.\n\n**Collect for cosmetics/items.**

@@ -1,0 +1,1 @@
+# Pets Tier List\n\nTamed pets utility.\n\n## S Tier\n- Fire Mammoth: High HP/DPS.\n- Alpha Wolf: Pack leader.\n- Lava Mammoth.\n\n## A Tier\n- Polar Bear, Bear, Mammoth.\n- Pet Wolf packs.\n\n## B Tier\n- Bunny (fast), Frog (poison?).\n\n## C Tier\n- Kiwi.\n\n**Notes:** Zookeeper/Beastmaster boosts.
