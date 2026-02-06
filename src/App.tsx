@@ -1,1 +1,48 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';\nimport Navbar from './components/Navbar';\nimport Home from './pages/Home';\nimport Items from './pages/Items';\nimport Entities from './pages/Entities';\nimport Chests from './pages/Chests';\nimport Badges from './pages/Badges';\nimport Locations from './pages/Locations';\nimport Crafting from './pages/Crafting';\nimport Campfire from './pages/Campfire';\nimport Classes from './pages/Classes';\nimport Lore from './pages/Lore';\nimport UpdateLog from './pages/UpdateLog';\nimport TipsAndTricks from './pages/TipsAndTricks';\nimport Fishing from './pages/Fishing';\nimport TierLists from './pages/TierLists';\nimport './App.css';\nimport Search from './components/Search';\n\nfunction App() {\n  return (\n    <Router>\n      <div className="app-container">\n        <Navbar />\n        <main className="main-content">\n          <Routes>\n            <Route path="/" element={<Home />} />\n            <Route path="/items" element={<Items />} />\n            <Route path="/entities" element={<Entities />} />\n            <Route path="/chests" element={<Chests />} />\n            <Route path="/badges" element={<Badges />} />\n            <Route path="/locations" element={<Locations />} />\n            <Route path="/crafting" element={<Crafting />} />\n            <Route path="/campfire" element={<Campfire />} />\n            <Route path="/classes" element={<Classes />} />\n            <Route path="/lore" element={<Lore />} />\n            <Route path="/update-log" element={<UpdateLog />} />\n            <Route path="/tips-and-tricks" element={<TipsAndTricks />} />\n            <Route path="/fishing" element={<Fishing />} />\n            <Route path="/tier-lists" element={<TierLists />} />\n          </Routes>\n        </main>\n      </div>\n    </Router>\n  );\n}\n\nexport default App;
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Items from './pages/Items';
+import Entities from './pages/Entities';
+import Chests from './pages/Chests';
+import Badges from './pages/Badges';
+import Locations from './pages/Locations';
+import Crafting from './pages/Crafting';
+import Campfire from './pages/Campfire';
+import Classes from './pages/Classes';
+import Lore from './pages/Lore';
+import UpdateLog from './pages/UpdateLog';
+import TipsAndTricks from './pages/TipsAndTricks';
+import Fishing from './pages/Fishing';
+import TierLists from './pages/TierLists.mdx';
+import './Components/App.css';
+import Search from './components/Search';
+
+function App() {
+  return (
+    <Router>
+      <div className="app-container">
+        <Navbar />
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/items" element={<Items />} />
+            <Route path="/entities" element={<Entities />} />
+            <Route path="/chests" element={<Chests />} />
+            <Route path="/badges" element={<Badges />} />
+            <Route path="/locations" element={<Locations />} />
+            <Route path="/crafting" element={<Crafting />} />
+            <Route path="/campfire" element={<Campfire />} />
+            <Route path="/classes" element={<Classes />} />
+            <Route path="/lore" element={<Lore />} />
+            <Route path="/update-log" element={<UpdateLog />} />
+            <Route path="/tips-and-tricks" element={<TipsAndTricks />} />
+            <Route path="/fishing" element={<Fishing />} />
+            <Route path="/tier-lists" element={<TierLists />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
+  );
+}
+
+export default App;
