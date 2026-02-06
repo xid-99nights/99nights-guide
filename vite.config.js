@@ -1,14 +1,1 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
-import path from 'path'
-
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: [react(),tailwindcss()],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
-})
+import { defineConfig } from 'vite'\nimport react from '@vitejs/plugin-react'\nimport tailwindcss from '@tailwindcss/vite'\nimport path from 'path'\nimport mdRollup from '@mdx-js/rollup'\nimport remarkGfm from 'remark-gfm'\n\n// https://vite.dev/config/\nexport default defineConfig({\n  plugins: [react(), tailwindcss(), mdRollup([remarkGfm()])],\n  resolve: {\n    alias: {\n      "@": path.resolve(__dirname, "./src"),\n    },\n  },\n})
